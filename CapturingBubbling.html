@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPTURING & BUBBLING</title>
+    <style>
+        body{
+            background-color: azure;
+        }
+        h2{
+            text-align: center;
+            color: darkcyan;
+        }
+        .grandparent{
+            height: 400px;
+            width: 400px;
+            background-color: brown;
+            margin: auto;
+        }
+        .parent{
+            height: 200px;
+            width: 200px;
+            background-color: aquamarine;
+            position: absolute;
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+        .child{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(34, 175, 210);
+            position: absolute;
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>BUBBLING[moving outward from inside]</h2>
+    <div id="grandparent1" class="grandparent">
+        <div id="parent1" class="parent">
+            <div id="child1" class="child"></div>
+        </div>
+    </div>
+    <h2>CAPTURING[moving inside from outward]</h2>
+    <div id="grandparent2" class="grandparent">
+        <div id="parent2" class="parent">
+            <div id="child2" class="child"></div>
+        </div>
+    </div>
+    <script>
+        var gp1=document.getElementById("grandparent1");
+        var gp2=document.getElementById("grandparent2");
+        var p1=document.getElementById("parent1");
+        var p2=document.getElementById("parent2");
+        var c1=document.getElementById("child1");
+        var c2=document.getElementById("child2");
+
+        gp1.addEventListener('click', event=>{
+            alert("grandparent bubbling");
+        })
+
+        p1.addEventListener('click', event=>{
+            alert("parent bubbling");
+        })
+
+        c1.addEventListener('click', event=>{
+            alert("child bubbling");
+        })
+       
+        //to make capture visible set it to true.
+
+        gp2.addEventListener('click', event=>{
+            alert("grandparent capturing");
+        },{capture:true})
+
+        p2.addEventListener('click', event=>{
+            alert("parent capturing");
+        },{capture:true})
+
+        c2.addEventListener('click', event=>{
+            alert("child capturing");
+        },{capture:true})
+
+    </script>
+</body>
+</html>
