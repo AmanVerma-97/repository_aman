@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        div{
+            width: 50%;
+            margin: auto;
+            background-color: aliceblue;
+        }
+        .center{
+            text-align: center;
+            color: darkgreen;
+        }
+        span{
+            font-weight: 600;
+            color: maroon;
+        }
+       
+        .out{
+            text-decoration: underline;
+            text-decoration-color: black;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h2 class="center">IIFE(Immediatley invoked function expression).</h2>
+    <p>IIFE is used in javascript to avoid the need to create global variables or functions.</p>
+    <p>This is used in case we have more than one javascript files attached to <span>SAME</span> html.</p>
+    <p>These files have the same<span>GLOBAL SCOPE</span> and hence might lead to problems in case of variables and functions with same name.</p>
+    <p>If you want variables with the same names in both the JS files
+        without having any error, then you can enclose your code within
+        curly braces to make its scope block-level. Then use the <span>let</span>
+        keyword to declare your variables within them.</p>
+    </div>
+    <div>
+        <h2 class="center">OUTPUT</h2>
+        <p id="first" class="out"></p>
+        <p id="second" class="out"></p>
+    </div>
+    <script src="IIFE1.js"></script>
+    <script src="IIFE2.js"></script>
+</body>
+</html>
