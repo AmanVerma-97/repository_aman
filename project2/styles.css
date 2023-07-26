@@ -1,0 +1,36 @@
+#items{
+    height: auto;
+    width: 200px;
+    margin: auto;
+    align-items: center;
+}
+
+.circle {
+    height: 150px;
+    width: 150px;
+    background-color: green;
+    border-radius: 50%;
+    margin: 10px;
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.shape{
+    height: 80px;
+    width:80px;
+    background-color: gray;
+    display: flex;
+    margin: auto;
+}
+
+.button{
+    border: 2px solid black;
+    background-color: beige;
+    border-top-left-radius: 5%;
+    margin:10px;
+    width:150px;
+}
+
+.button:hover{
+    zoom: 1.025;
+}
