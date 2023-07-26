@@ -1,3 +1,13 @@
+/*Shallow Copy
+In Shallow copy, a copy of the original object is stored and only the reference address is finally copied.
+The changes made in the copied object also reflect the original object.
+It stores references of the object in the main memory.*/
+
+/*Deep Copy
+In Deep copy, the copy of the original object and the repetitive copies both are stored.
+There is no reflection on the original object when the changes are made in the copied object.
+It stores copies of the object values.*/
+
 let arr=[1,2,3,4,7,8,9];
 let ans=arr.filter(isOdd);
 console.log(ans);
@@ -25,7 +35,7 @@ console.log("---------------------------");
 console.log("----------DEEP COPY OF ARRAYS/OBJECTS------------");
 console.log("--ARRAYS--")
 
-let arr1=[1,2,3,"Aman"];
+let arr1=[1,2,3,"Aman"];               
 //Method 1 --> Spread Operator
 let arr2=[...arr1];
 arr2.push("Verma");
