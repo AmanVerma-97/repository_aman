@@ -1,0 +1,23 @@
+body{
+    background-color: aquamarine;
+}
+
+#box{
+    height: 150px;
+    width: 150px;
+    background-color: maroon;
+    position:absolute;
+    top: 200px;
+    left: 200px;
+}
+
+p{
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+#box:hover{
+    cursor: pointer;
+}
