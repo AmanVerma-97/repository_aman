@@ -1,0 +1,89 @@
+body{
+    background: linear-gradient(#b93fff,#5c209f,#3f55ff,#26ca52,#f3fd2f,#f9a82e,#ca2626);
+    /* background-repeat: no-repeat; */
+    font-family:monospace;
+    font-size: 1.1rem;
+}
+
+body>div{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.66);
+    width: 90%;
+    min-height:250px;
+    border: 2px solid black;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* border-spacing: 50px 0px; */
+}
+
+.center{
+    text-align: center;
+}
+
+/* CSS for first major div and it's elements */
+
+#input-box{
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+#input-box>div{
+    margin-top: 10px;
+}
+
+#input-num{
+    width: 60%;
+}
+
+#count-input{
+    width: 100%;
+    border-radius: 5px;
+}
+
+#counter-button{
+    width: 40%;
+}
+
+#count{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+
+
+/* CSS for second major Div and it's elements*/
+#display-box{
+    flex-direction: column;
+}
+
+#result-container{
+    width: 100%;
+    display: flex;
+    direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#result-container>div{
+    min-height:50px;
+    width: 100px;
+    border: 2px solid white;
+    margin-left: 2px;
+    color: #1c2887;
+    font-weight: bold;
+}
+
+/* Handling for different screen sizes */
+
+@media screen and (max-width:300px) {
+    #result-container>div{
+        width: 33%;
+    }
+}
