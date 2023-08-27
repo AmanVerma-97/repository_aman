@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    /* overflow: hidden; */
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right,#669696, #91dbdb);
+}
+
+body>div{
+    min-height: 300px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    /* background-color: #ca6f5f52; */
+}
+
+h1{
+    color: rgb(40, 21, 110);
+    text-shadow: 3px 3px 3px #35466ccc;
+    text-align: center;
+    font-family: 'Cookie', cursive;
+}
+
+h2{
+    color: rgb(51, 19, 51);
+    font-weight: bolder;
+    -webkit-text-stroke: 2px #0c1b1e;
+    font-family:"Lucida Handwriting",Lucida,cursive;
+}
+
+#intro{
+    flex-direction: column;
+}
+
+
+/* social-media icons */
+
+
+#account-details{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.fa-facebook{
+    color: rgb(13, 39, 155);
+}
+
+.fa-youtube{
+    color: rgb(166, 6, 6);
+}
+
+.fa-twitter{
+    color: rgb(6, 122, 254);
+}
+.fa-instagram{
+    background-color: rgb(141, 34, 70);
+    border-radius: 50px;
+}
+
+.counter-container{
+    min-height: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.counter{
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+/* adjusting for smaller screens */
+
+@media screen and (max-width:520px) {
+    #account-details{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
